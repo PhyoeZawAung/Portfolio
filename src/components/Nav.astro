@@ -1,0 +1,52 @@
+---
+import NavItem from "./NavItem.astro";
+import Text from "./Text.astro";
+---
+
+<nav class="bg-gray-50 dark:bg-gray-800">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div
+        class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+      >
+        <!-- <div class="flex flex-shrink-0 items-center">
+          <img
+            class="h-8 w-auto"
+            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+            alt="Your Company"
+          />
+        </div> -->
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <NavItem href="/">Home</NavItem>
+            <NavItem href="/contact">Contact</NavItem>
+            <NavItem href="/blogs">Blogs</NavItem>
+            <NavItem href="/projects">Projects</NavItem>
+            <NavItem href="/about">About</NavItem>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+      >
+        <!-- Theme Select -->
+        <div class="relative ml-3">
+          <div>
+            <label for="theme-select" class="sr-only"><Text>Theme</Text></label>
+            <div class="flex flex-row items-center gap-2">
+              <i id="themeIcon"></i>
+              <select
+                id="theme-select"
+                class="block py-2.5 px-0 w-full text-sm text-gray-800 bg-transparent border-0 appearance-none dark:text-gray-50 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
+              >
+                <option value="auto"><Text>Auto</Text></option>
+                <option value="light"><Text>Light</Text></option>
+                <option value="dark"><Text>Dark</Text></option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
